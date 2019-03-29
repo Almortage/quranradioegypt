@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageConfig pageType="videolist">
+	<videoitems>
+		<videoitem uid="eghPjLTeEXpS" title="سورة البقرة" image_thmb="bakara.jpg" file_url="http://v.seattleclouds.com/videos/movie_file.mp4" file_size="0" file_modified_date="NA"/>
+		<videoitem uid="ltjvsStRKFLu" title="الرقية الشرعية بصوت عذب جميل" image_thmb="roqia.jpg" file_url="http://v.seattleclouds.com/videos/movie_file.mp4" file_size="0" file_modified_date="NA"/>
+		<videoitem uid="idasmavkCfdo" title="Your video file title 3" image_thmb="movie_file.png" file_url="http://v.seattleclouds.com/videos/movie_file.mp4" file_size="0" file_modified_date="NA"/>
+	</videoitems>
+</pageConfig>
