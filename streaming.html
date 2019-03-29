@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>RadioStation</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" type="text/css" href="radiostreamingcssaddition.css">
+</head>
+
+<body class="radiostream_container">
+
+  <!-- Header Image-->  
+  <div align="center">
+    <img id="headerimage" src="radiotoplogo-new2.png" style="width: 100%;" border="0">
+  </div>
+  
+  <!-- Cover Radio Image-->
+  <div class="coverimage" align="center">
+    <img id="footerimage" src="radio.png">
+  </div>
+
+  <div id="play" align="center">
+    <a id="streamlink" href="bgplayer-play://http://5.196.104.90:9994/" onclick="play()">
+    <img src="play_button.png" style="width:300px !important;"></a>
+  </div>
+  <div id="stop" style="display:none;" align="center">
+    <a href="bgplayer-stop://" onclick="stop()">
+    <img src="stop_button.png" style="width:300px !important;"></a>
+  </div>
+  
+  <script type="text/javascript" src="radiostreamingscript.js"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>1QuranKareemRadio</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" type="text/css" href="radiostreamingcssaddition.css">
+  <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+  <script src="jquery.min.js"></script>
+  <script src="jquery.mobile-1.4.5.min.js"></script>	
+	
+	
+	
+  </head>
+
+<body>
+
+<audio class="audio" id="audioStream">
+		<source type="audio/mpeg" src="http://51.255.131.14:9994/;">
+	</audio>
+    <div data-role="page" style="background: url(bg.jpg); background-size:cover;">
+ 
+        <div data-role="header">
+            <h1>Mimutes</h1>
+        </div><!-- /header -->	
+	
+	
+<!-- Cover Radio Image-->
+<div class="coverimage" align="center">
+	<img src="radio-logo.png" style="position:absolute;left:0;top:35%;width:100%">
+</div>
+	
+	
+	
+
+<div id="play" align="center">
+	<a  onclick="go()">
+		<img src="play.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;">
+	</a>
+</div>	
+	
+	
+	
+	
+<div id="timer" style="display:none;" align="center">
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a  onclick="cut()">
+		<img src="alarm3.png" style="width:18% !important;position: fixed;bottom: 3%;left: 66%;border-radius: 101px;box-shadow: -4px 8px 23px #000;"></a>
+</div>
+	
+	
+	
+	
+<div id="stop" style="display:none;" align="center">
+	<a  onclick="cut()">
+		<img src="stop1.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;"></a>
+</div>
+
+<script type="text/javascript" >
+	
+	function go(){
+		
+ document.getElementById("audioStream").play();	
+	if (navigator.onLine) 
+{
+document.getElementById('play').style.display = 'none';
+document.getElementById('stop').style.display = 'block';
+document.getElementById('timer').style.display = 'block';
+
+	}	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	function cut(){
+		
+document.getElementById("audioStream").pause();	
+document.getElementById('stop').style.display = 'none';
+document.getElementById('play').style.display = 'block';
+document.getElementById('timer').style.display = 'none';}
+	</script>
+
+
+
+
+
+
+</div> <!-- page -->
+
+
+
+
+
+</body>
+</html>

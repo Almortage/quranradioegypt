@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>1QuranKareemRadio</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <link rel="stylesheet" type="text/css" href="radiostreamingcssaddition.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script type="text/javascript" src="jquery.countdownTimer.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="jquery.countdownTimer.css" />
+	<!-- <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css"> 
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script> -->
+	
+	
+  </head>
+
+<body style="background-image:url(radio1.jpg); background-size: cover;">
+	
+	<audio class="audio" id="audioStream">
+		<source type="audio/mpeg" src="http://51.255.131.14:9994/;">
+	</audio>
+	
+	
+
+	
+	
+<!-- Cover Radio Image-->
+<div class="coverimage" align="center">
+	<img src="radio-logo.png" style="position:absolute;left:0;top:35%;width:100%">
+</div>
+
+<div id="streamlink" align="center">
+	
+	<a id="play" onclick="go()">
+		<img src="play.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;">
+	</a>
+		
+	<a id="timer" style="" href="#popupLogin" data-rel="popup">
+		<img src="alarm3.png" style="width:18% !important;position: fixed;bottom: 3%;left: 66%;border-radius: 101px;box-shadow: -4px 8px 23px #000;">
+	</a>
+		
+		
+
+<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all" data-dismissible="false">
+    <form style="background-color:#fff0cf;">
+        <div  style="padding:10px 20px;">
+            <h3>بعد كم من الوقت تود إيقاف الإذاعة تلقائيا</h3>
+			<label for="slider-fill">minutes</label>
+<input name="slider-fill" id="slider-mins"  min="0" max="50" step="5" data-highlight="false" type="range">
+			<label for="slider-fill">Hours</label>
+<input name="slider-fill" id="slider-hours"  min="0" max="24" step="1" data-highlight="true" type="range">
+            	<a onclick="s()"> Display </a>
+          <a id="kkk" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-clock " data-rel="button" >ابدأ الآن المؤقت</a>
+          <a id="deletethetimernow" >jhgghjhKJHKJHJ</a>
+
+			<a type="cancel" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-delete" data-role="back">إلغاء</a>
+			
+		<!--	<script>
+				$("#kkk").click(function() {
+  var slider_value = $("#slider-mins").val();
+  xx=$("#slider-mins").val();
+					document.write(slider_value);
+});
+					
+			</script>  -->
+			
+		<p id="bottomline" >
+
+			</p>  	
+			
+
+
+        </div>
+    </form>
+</div>
+</div>
+<div id="stop" style="display:none;" align="center">
+	<a  onclick="cut()">
+		<img src="stop1.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;"></a>
+</div>
+
+
+	
+<div id="countdowntimer" style="position:fixed;bottom:3%;left:0%;"><span id="future_date"> </span></div>
+	
+	<button id="stopB" style="position:fixed;top:50%;" onclick="$('#future_date').hide();">DDD</button>
+	
+	<script type="text/javascript">
+      $("#kkk").click( function(){
+      $("#future_date").countdowntimer({
+          minutes : 0,
+			seconds:$("#slider-mins").val(),
+          size : "lg",
+			pauseButton: "pauseB",
+			stopButton:"stopB",
+			timeUp: cut
+			
+        });
+		  
+      });
+		$("#destroyBtn").click(function(){
+			
+			$('#future_date').hide();
+			
+			jQuery("#future_date").countdowntimer("stop","stop");
+			
+			
+		});
+</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script> 
+		
+		function go(){	
+document.getElementById("audioStream").play();	
+	if (navigator.onLine) 
+{
+document.getElementById('play').style.display = 'none';
+document.getElementById('stop').style.display = 'block';
+document.getElementById('timer').style.display = 'block';
+
+	}	
+	}
+	
+	
+	
+	    function cut(){		
+document.getElementById("audioStream").pause();	
+document.getElementById('stop').style.display = 'none';
+document.getElementById('play').style.display = 'block';
+document.getElementById('timer').style.display = 'none';
+	}
+	
+		function poppop(){
+   alert('hh');
+			
+		}
+	
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
